@@ -167,10 +167,12 @@ animations = [ {
 radius = 16.0
 
 [node name="slowzoikz" type="PathFollow2D"]
+scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 4 )
 
 [node name="body" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
+frame = 2
 playing = true
 
 [node name="hp" type="TextureProgress" parent="."]

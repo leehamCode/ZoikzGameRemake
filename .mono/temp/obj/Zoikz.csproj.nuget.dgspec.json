@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\gddir\\zoikz (1)\\zoikz\\Zoikz.csproj": {}
+    "C:\\gddir\\zoikz\\Zoikz.csproj": {}
   },
   "projects": {
-    "C:\\gddir\\zoikz (1)\\zoikz\\Zoikz.csproj": {
+    "C:\\gddir\\zoikz\\Zoikz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\gddir\\zoikz (1)\\zoikz\\Zoikz.csproj",
+        "projectUniqueName": "C:\\gddir\\zoikz\\Zoikz.csproj",
         "projectName": "Zoikz",
-        "projectPath": "C:\\gddir\\zoikz (1)\\zoikz\\Zoikz.csproj",
+        "projectPath": "C:\\gddir\\zoikz\\Zoikz.csproj",
         "packagesPath": "C:\\Users\\lihan\\.nuget\\packages\\",
-        "outputPath": "C:\\gddir\\zoikz (1)\\zoikz\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\gddir\\zoikz\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Zoikz.Tools;
 
-public class Main : Node2D
+public class GlueGun : Node2D
 {
+
 	private Sprite weaponbase;
 
 	private CollisionShape2D shape;
@@ -22,18 +23,18 @@ public class Main : Node2D
 
 	private AnimatedSprite _Threelevel;
 
-	private volatile  HashSet<Node2D> attackarea_enemies = new HashSet<Node2D>();
+	private AnimatedSprite _attackeffect;
+
+	private volatile HashSet<Node2D> attackarea_enemies = new HashSet<Node2D>();
 
 	private Tween _tween;
-
+	
 	private Tween _tween2;
-
+	
 	private Timer _timer;
-
 
 	public int Level { get; set; } = 1;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		weaponbase = GetNode<Sprite>("base");
@@ -44,25 +45,23 @@ public class Main : Node2D
 		_Onelevel = GetNode<AnimatedSprite>("Onelevel");
 		_Twolevel = GetNode<AnimatedSprite>("Twolevel");
 		_Threelevel = GetNode<AnimatedSprite>("Threelevel");
+		_attackeffect = GetNode<AnimatedSprite>("attackeffect");
 		_tween = GetNode<Tween>("Tween");
 		_tween2 = GetNode<Tween>("Tween2");
 		_timer = GetNode<Timer>("attacktimer");
-
 	}
 
-
-	//Listen MouseInput Event
 	public override void _Input(InputEvent @event)
 	{
 		if (@event is InputEventMouseButton buttonEvent && buttonEvent.ButtonIndex == (int)ButtonList.Left && buttonEvent.Pressed)
 		{
-			 
+
 			Vector2 globalMousePosition = GetGlobalMousePosition();
 
-			
+
 			Vector2 localMousePosition = globalMousePosition;
 
-			  
+
 			GD.Print("Mouse clicked at local position: " + localMousePosition);
 
 			//is Click Sprite
@@ -81,7 +80,7 @@ public class Main : Node2D
 			}
 
 			//is Click out of uporsell
-			if (IsPointClickOut_UporSell(localMousePosition)&& _uporsell.Visible)
+			if (IsPointClickOut_UporSell(localMousePosition) && _uporsell.Visible)
 			{
 				GD.Print("DEBUG:|Click out of circle! 1");
 
@@ -93,10 +92,6 @@ public class Main : Node2D
 		}
 	}
 
-	/// <summary>
-	/// we will deal with angle of MGun
-	/// </summary>
-	/// <param name="delta"></param>
 	public override void _PhysicsProcess(float delta)
 	{
 		if (attackarea_enemies.Count != 0)
@@ -138,17 +133,18 @@ public class Main : Node2D
 			if (angle_bool)  //+ angle
 			{
 				if (_Onelevel.Visible)
-					_Onelevel.RotationDegrees = 180-(float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
+					_Onelevel.RotationDegrees = 180 - (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 				if (_Twolevel.Visible)
-					_Twolevel.RotationDegrees = 180-(float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
+					_Twolevel.RotationDegrees = 180 - (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 				if (_Threelevel.Visible)
-					_Threelevel.RotationDegrees = 180-(float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
+					_Threelevel.RotationDegrees = 180 - (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 			}
-			else{            //- angle
+			else
+			{            //- angle
 				if (_Onelevel.Visible)
-					_Onelevel.RotationDegrees = -1*(float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
+					_Onelevel.RotationDegrees = -1 * (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 				if (_Twolevel.Visible)
-					_Twolevel.RotationDegrees = -1*(float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
+					_Twolevel.RotationDegrees = -1 * (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 				if (_Threelevel.Visible)
 					_Threelevel.RotationDegrees = -1 * (float)(Math.Atan(Real_len / Real_Wid) * 180 / Math.PI);
 			}
@@ -169,8 +165,8 @@ public class Main : Node2D
 			//_tween2.Start();
 		}
 
-
 	}
+
 
 	#region Custom Method
 
@@ -230,19 +226,17 @@ public class Main : Node2D
 		return false;
 	}
 
+
 	#endregion
 
 
-
-
-
-	#region Signals Connections
+	#region Connect Signals
 
 	private void _on_attackarea_area_entered(object area)
 	{
 		Node2D node = area as Node2D;
 
-		if(node != null)
+		if (node != null)
 		{
 			lowzoikz enemy = node.GetParent() as lowzoikz;
 
@@ -368,18 +362,14 @@ public class Main : Node2D
 
 				_timer.Start();
 			}
-		
-		
+
+
 		}
-		
-		
 	}
 
 
 	private void _on_attackarea_area_exited(object area)
 	{
-		
-
 		if (attackarea_enemies.Count != 0)
 		{
 			Node2D node = area as Node2D;
@@ -465,7 +455,7 @@ public class Main : Node2D
 				}
 
 				slowzoikz enemy3 = node.GetParent() as slowzoikz;
-				if(enemy3 != null)
+				if (enemy3 != null)
 				{
 					if (attackarea_enemies.Contains(enemy3))
 					{
@@ -503,7 +493,7 @@ public class Main : Node2D
 				}
 
 				highzoikz enemy4 = node.GetParent() as highzoikz;
-				if(enemy4 != null)
+				if (enemy4 != null)
 				{
 					if (attackarea_enemies.Contains(enemy4))
 					{
@@ -542,7 +532,7 @@ public class Main : Node2D
 
 				finalzoikz enemy5 = node.GetParent() as finalzoikz;
 
-				if(enemy5 != null)
+				if (enemy5 != null)
 				{
 					if (attackarea_enemies.Contains(enemy5))
 					{
@@ -584,13 +574,8 @@ public class Main : Node2D
 
 
 		}
-		
-
-		
 	}
-
-
-	//AttackTimer
+	
 	private void _on_attacktimer_timeout()
 	{
 		if (attackarea_enemies.Count != 0)
@@ -598,10 +583,10 @@ public class Main : Node2D
 			Node2D enemy = attackarea_enemies.First();
 
 			lowzoikz real_enemy = enemy as lowzoikz;
-			
+
 			if (real_enemy != null)
 			{
-				if(real_enemy.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy.progress.Value <= StaticNumbers.MGUN_DAMAGE)
 				{
 					real_enemy.progress.Value = 0;
 					real_enemy.progress.Visible = false;
@@ -611,6 +596,9 @@ public class Main : Node2D
 				else
 				{
 					real_enemy.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					_attackeffect.Visible = true;
+					_attackeffect.Position = real_enemy.Position;
+					_attackeffect.Play("default");
 				}
 			}
 
@@ -618,7 +606,7 @@ public class Main : Node2D
 
 			if (real_enemy2 != null)
 			{
-				if(real_enemy2.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy2.progress.Value <= StaticNumbers.MGUN_DAMAGE)
 				{
 					real_enemy2.progress.Value = 0;
 					real_enemy2.progress.Visible = false;
@@ -628,12 +616,15 @@ public class Main : Node2D
 				else
 				{
 					real_enemy2.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					_attackeffect.Visible = true;
+					_attackeffect.Position = real_enemy.Position;
+					_attackeffect.Play("default");
 				}
 			}
 
 			slowzoikz real_enemy3 = enemy as slowzoikz;
 
-			if(real_enemy3 != null)
+			if (real_enemy3 != null)
 			{
 				if (real_enemy3.progress.Value <= StaticNumbers.MGUN_DAMAGE)
 				{
@@ -645,12 +636,15 @@ public class Main : Node2D
 				else
 				{
 					real_enemy3.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					_attackeffect.Visible = true;
+					_attackeffect.Position = real_enemy.Position;
+					_attackeffect.Play("default");
 				}
 			}
 
 			highzoikz real_enemy4 = enemy as highzoikz;
 
-			if(real_enemy4 != null)
+			if (real_enemy4 != null)
 			{
 				if (real_enemy4.progress.Value <= StaticNumbers.MGUN_DAMAGE)
 				{
@@ -662,12 +656,15 @@ public class Main : Node2D
 				else
 				{
 					real_enemy4.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					_attackeffect.Visible = true;
+					_attackeffect.Position = real_enemy.Position;
+					_attackeffect.Play("default");
 				}
 			}
 
 			finalzoikz real_enemy5 = enemy as finalzoikz;
 
-			if(real_enemy5 != null)
+			if (real_enemy5 != null)
 			{
 				if (real_enemy5.progress.Value <= StaticNumbers.MGUN_DAMAGE)
 				{
@@ -679,16 +676,17 @@ public class Main : Node2D
 				else
 				{
 					real_enemy5.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					_attackeffect.Visible = true;
+					_attackeffect.Position = real_enemy.Position;
+					_attackeffect.Play("default");
 				}
 			}
 		}
 	}
 
 	#endregion
+
 }
-
-
-
 
 
 

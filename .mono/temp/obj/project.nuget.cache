@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VWJnlbI96AFQSTaVMkKMt6VeL8jsxh0a1LcBFe4+XM9uTbb4pjQlGvLGhSbWdkhrJnp+/SBnVvl3L2ICyawQaQ==",
+  "dgSpecHash": "A1LGoEi35sOciG6Ui04a7INK6Lu6IiSB39T+6WD2z6PBI3n+rXkoKyP2f8DogAl6rGyaJ0DqP1DII9wBkC8t3g==",
   "success": true,
-  "projectFilePath": "C:\\gddir\\zoikz (1)\\zoikz\\Zoikz.csproj",
+  "projectFilePath": "C:\\gddir\\zoikz\\Zoikz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lihan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

@@ -148,9 +148,9 @@ public class PlaceWeapon : Node2D
 
 								Vector2 real = FindMostClostFromPoints(globalMousePosition, point);
 
-								PackedScene mgunscence = GD.Load<PackedScene>("res://Huds/MGun.tscn");
+								PackedScene mgunscence = GD.Load<PackedScene>("res://Huds/GlueGun.tscn");
 
-								Main node = (Main)mgunscence.Instance();
+								GlueGun node = (GlueGun)mgunscence.Instance();
 
 								node.Position = real;
 

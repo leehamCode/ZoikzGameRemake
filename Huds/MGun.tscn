@@ -139,7 +139,7 @@ anims/showUp = SubResource( 6 )
 
 [node name="uporsell" parent="." instance=ExtResource( 12 )]
 visible = false
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.65, 0.65 )
 
 [node name="Tween" type="Tween" parent="."]
 
