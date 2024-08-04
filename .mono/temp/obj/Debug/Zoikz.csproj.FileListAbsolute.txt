@@ -1,0 +1,58 @@
+E:\OtherGods\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+E:\OtherGods\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+E:\OtherGods\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
+C:\gddir\zoikz2\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+C:\gddir\zoikz2\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+C:\gddir\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+E:\OtherGods\zoikz3\zoikz2\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
+C:\gddir\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+C:\gddir\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+E:\OtherGods\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CopyComplete
+C:\gddir\zoikz (1)\zoikz\.mono\temp\bin\Debug\Zoikz.dll
+C:\gddir\zoikz (1)\zoikz\.mono\temp\bin\Debug\Zoikz.pdb
+C:\gddir\zoikz (1)\zoikz\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.AssemblyReference.cache
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.GeneratedMSBuildEditorConfig.editorconfig
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfoInputs.cache
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.AssemblyInfo.cs
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CoreCompileInputs.cache
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CopyComplete
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.dll
+C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
