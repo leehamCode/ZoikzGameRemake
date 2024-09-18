@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://assets/enemys/destroy/33.png" type="Texture" id=1]
 [ext_resource path="res://assets/enemys/destroy/41.png" type="Texture" id=2]
@@ -59,6 +59,7 @@
 [ext_resource path="res://Enemy/finalzoikz.cs" type="Script" id=57]
 [ext_resource path="res://assets/images/hud/Hud1.png" type="Texture" id=58]
 [ext_resource path="res://assets/images/hud/Hud2.png" type="Texture" id=59]
+[ext_resource path="res://assets/enemys/gluegun.png" type="Texture" id=60]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -226,12 +227,75 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=31]
 radius = 20.0
 
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 0, 0, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 28, 0, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 56, 0, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 84, 0, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 112, 0, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 0, 26, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 28, 26, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 56, 26, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 84, 26, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 112, 26, 28, 26 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 60 )
+region = Rect2( 0, 52, 28, 26 )
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="finalzoikz" type="PathFollow2D"]
 script = ExtResource( 57 )
 
 [node name="body" type="AnimatedSprite" parent="."]
 frames = SubResource( 30 )
-frame = 23
+frame = 13
 playing = true
 
 [node name="hp" type="TextureProgress" parent="."]
@@ -249,5 +313,9 @@ texture_progress = ExtResource( 58 )
 [node name="hitbox" type="CollisionShape2D" parent="hits"]
 position = Vector2( 1, 0 )
 shape = SubResource( 31 )
+
+[node name="affects" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 43 )
 
 [connection signal="animation_finished" from="body" to="." method="play_destroy_then_quee"]

@@ -8,7 +8,16 @@ public class lowzoikz : PathFollow2D
 
 	public AnimatedSprite body { get; set; }
 
+	public AnimatedSprite affects { get; set; }
+
 	public int THE_HP { get; set; } = StaticNumbers.LOW_ZOIKZ_HP;
+
+	public float THE_SPEED { get; set; } = StaticNumbers.LOW_ZOIKZ_SPEED;
+
+	/// <summary>
+	/// Is Attack By GlueGun
+	/// </summary>
+	public bool IS_GLUED { get; set; } = false;
 
 
 	public override void _Ready()
@@ -16,7 +25,7 @@ public class lowzoikz : PathFollow2D
 		progress = GetNode<TextureProgress>("hp");
 		progress.Value = THE_HP;
 		body = GetNode<AnimatedSprite>("body");
-
+		affects = GetNode<AnimatedSprite>("affects");
 	}
 
 	public override void _PhysicsProcess(float delta)
@@ -27,7 +36,7 @@ public class lowzoikz : PathFollow2D
 		}
 		else
 		{
-			this.UnitOffset += StaticNumbers.LOW_ZOIKZ_SPEED;
+			this.UnitOffset += THE_SPEED;
 		}
 	}
 

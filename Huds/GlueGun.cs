@@ -23,6 +23,9 @@ public class GlueGun : Node2D
 
 	private AnimatedSprite _Threelevel;
 
+	/// <summary>
+	/// Now It's on enemy,this v is not used
+	/// </summary>
 	private AnimatedSprite _attackeffect;
 
 	private volatile HashSet<Node2D> attackarea_enemies = new HashSet<Node2D>();
@@ -383,6 +386,11 @@ public class GlueGun : Node2D
 					if (attackarea_enemies.Contains(enemy))
 					{
 						//when a enemy exit attackarea,remove it
+
+						//If it with affect with gluegun,then stop it
+						if(enemy.affects.Visible) { enemy.affects.Visible = false; }
+						if (enemy.THE_SPEED == StaticNumbers.LOW_ZOIKZ_SPEED / 2) { enemy.THE_SPEED *= 2; }
+
 						attackarea_enemies.Remove(enemy);
 						GD.Print(" Is Removed! ");
 					}
@@ -422,6 +430,11 @@ public class GlueGun : Node2D
 					if (attackarea_enemies.Contains(enemy2))
 					{
 						//when a enemy exit attackarea,remove it
+
+						//If it with affect with gluegun,then stop it
+						if (enemy2.affects.Visible) { enemy2.affects.Visible = false; }
+						if (enemy2.THE_SPEED == StaticNumbers.FAST_ZOIKZ_SPEED / 2) { enemy2.THE_SPEED *= 2; }
+
 						attackarea_enemies.Remove(enemy2);
 						GD.Print(" Is Removed! ");
 					}
@@ -460,6 +473,11 @@ public class GlueGun : Node2D
 					if (attackarea_enemies.Contains(enemy3))
 					{
 						//when a enemy exit attackarea,remove it
+
+						//If it with affect with gluegun,then stop it
+						if (enemy3.affects.Visible) { enemy3.affects.Visible = false; }
+						if (enemy3.THE_SPEED == StaticNumbers.SLOW_ZOIKZ_SPEED/ 2) { enemy3.THE_SPEED *= 2; }
+
 						attackarea_enemies.Remove(enemy3);
 						GD.Print(" Is Removed! ");
 					}
@@ -498,6 +516,11 @@ public class GlueGun : Node2D
 					if (attackarea_enemies.Contains(enemy4))
 					{
 						//when a enemy exit attackarea,remove it
+
+						//If it with affect with gluegun,then stop it
+						if (enemy4.affects.Visible) { enemy4.affects.Visible = false; }
+						if (enemy4.THE_SPEED == StaticNumbers.HIGH_ZOIKZ_SPEED / 2) { enemy4.THE_SPEED *= 2; }
+
 						attackarea_enemies.Remove(enemy4);
 						GD.Print(" Is Removed! ");
 					}
@@ -537,6 +560,11 @@ public class GlueGun : Node2D
 					if (attackarea_enemies.Contains(enemy5))
 					{
 						//when a enemy exit attackarea,remove it
+
+						//If it with affect with gluegun,then stop it
+						if (enemy5.affects.Visible) { enemy5.affects.Visible = false; }
+						if (enemy5.THE_SPEED == StaticNumbers.FINAL_ZOIKZ_SPEED / 2) { enemy5.THE_SPEED *= 2; }
+
 						attackarea_enemies.Remove(enemy5);
 						GD.Print(" Is Removed! ");
 					}
@@ -595,10 +623,15 @@ public class GlueGun : Node2D
 				}
 				else
 				{
+					//GlueGun slow down speed,show the affect anim
 					real_enemy.progress.Value -= StaticNumbers.GLUE_DEMAGE;
-					_attackeffect.Visible = true;
-					_attackeffect.Position = real_enemy.Position;
-					_attackeffect.Play("default");
+					if (!real_enemy.IS_GLUED)
+					{
+						real_enemy.THE_SPEED = real_enemy.THE_SPEED / 2;
+						real_enemy.IS_GLUED = true;
+					}
+					real_enemy.affects.Visible = true;
+					real_enemy.affects.Play("default");
 				}
 			}
 
@@ -616,9 +649,13 @@ public class GlueGun : Node2D
 				else
 				{
 					real_enemy2.progress.Value -= StaticNumbers.GLUE_DEMAGE;
-					_attackeffect.Visible = true;
-					_attackeffect.Position = real_enemy.Position;
-					_attackeffect.Play("default");
+					if (!real_enemy2.IS_GLUED)
+					{
+						real_enemy2.THE_SPEED = real_enemy2.THE_SPEED / 2;
+						real_enemy2.IS_GLUED = true;
+					}
+					real_enemy2.affects.Visible = true;
+					real_enemy2.affects.Play("default");
 				}
 			}
 
@@ -636,9 +673,13 @@ public class GlueGun : Node2D
 				else
 				{
 					real_enemy3.progress.Value -= StaticNumbers.GLUE_DEMAGE;
-					_attackeffect.Visible = true;
-					_attackeffect.Position = real_enemy.Position;
-					_attackeffect.Play("default");
+					if (!real_enemy3.IS_GLUED)
+					{
+						real_enemy3.THE_SPEED = real_enemy3.THE_SPEED / 2;
+						real_enemy3.IS_GLUED = true;
+					}
+					real_enemy3.affects.Visible = true;
+					real_enemy3.affects.Play("default");
 				}
 			}
 
@@ -656,9 +697,13 @@ public class GlueGun : Node2D
 				else
 				{
 					real_enemy4.progress.Value -= StaticNumbers.GLUE_DEMAGE;
-					_attackeffect.Visible = true;
-					_attackeffect.Position = real_enemy.Position;
-					_attackeffect.Play("default");
+					if (!real_enemy4.IS_GLUED)
+					{
+						real_enemy4.THE_SPEED = real_enemy4.THE_SPEED / 2;
+						real_enemy4.IS_GLUED = true;
+					}
+					real_enemy4.affects.Visible = true;
+					real_enemy4.affects.Play("default");
 				}
 			}
 
@@ -676,9 +721,13 @@ public class GlueGun : Node2D
 				else
 				{
 					real_enemy5.progress.Value -= StaticNumbers.GLUE_DEMAGE;
-					_attackeffect.Visible = true;
-					_attackeffect.Position = real_enemy.Position;
-					_attackeffect.Play("default");
+					if (!real_enemy5.IS_GLUED)
+					{
+						real_enemy5.THE_SPEED = real_enemy5.THE_SPEED / 2;
+						real_enemy5.IS_GLUED = true;
+					}
+					real_enemy5.affects.Visible = true;
+					real_enemy5.affects.Play("default");
 				}
 			}
 		}
