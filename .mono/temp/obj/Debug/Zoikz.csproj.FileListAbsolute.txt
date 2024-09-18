@@ -57,4 +57,5 @@ C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CopyComplete
 C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.dll
 C:\gddir\zoikz (1)\zoikz\.mono\temp\obj\Debug\Zoikz.pdb
 C:\gddir\zoikz\.mono\temp\bin\Debug\Newtonsoft.Json.dll
-C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.CopyComplete
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.sourcelink.json
+C:\gddir\zoikz\.mono\temp\obj\Debug\Zoikz.csproj.Up2Date

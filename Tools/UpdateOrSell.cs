@@ -54,11 +54,19 @@ public class UpdateOrSell : Node2D
 
 	private void _on_sellbtn_button_up()
 	{
+
+        GD.Print("DEBUG:Sell btn on !");
+		
 		if(GetParent() is Main)
 		{
 			StaticNumbers.CREDIT += GetParent<Main>().Level * StaticNumbers.MGUN_SELL_FEE;
 			GD.Print("You Sell The MGun!");
 			GetParent().QueueFree();
+		}
+		else if(GetParent() is GlueGun) {
+
+			StaticNumbers.CREDIT += GetParent<GlueGun>().Level * StaticNumbers.GLUE_SELL_FEE;
+			GD.Print("You sell The GlunGun!");
 		}
 		
 	}
@@ -85,6 +93,29 @@ public class UpdateOrSell : Node2D
 				mGun.GetNode<AnimatedSprite>("Onelevel").Visible = false;
 				mGun.GetNode<AnimatedSprite>("Threelevel").Visible = true;
 			}
+
+			GetParent().GetNode<AnimationPlayer>("AnimationPlayer").PlayBackwards("showUp");
+			this.Visible = false;
+		}
+		else if(GetParent() as GlueGun != null)
+		{
+			StaticNumbers.CREDIT -= StaticNumbers.GLUE_UPDATE_FEE;
+			GD.Print("You Update TheGlueGun!");
+			GlueGun gluegun =  GetParent<GlueGun>();
+			gluegun.Level++;
+			if(gluegun.Level == 2)
+			{
+				gluegun.GetNode<AnimatedSprite>("Twolevel").Visible=true;
+				gluegun.GetNode<AnimatedSprite>("Onelevel").Visible=false;
+				gluegun.GetNode<AnimatedSprite>("Threelevel").Visible=false;
+			}
+			else if (gluegun.Level == 3)
+			{
+                gluegun.GetNode<AnimatedSprite>("Twolevel").Visible = false;
+                gluegun.GetNode<AnimatedSprite>("Onelevel").Visible = false;
+                gluegun.GetNode<AnimatedSprite>("Threelevel").Visible = true;
+
+            }
 
 			GetParent().GetNode<AnimationPlayer>("AnimationPlayer").PlayBackwards("showUp");
 			this.Visible = false;

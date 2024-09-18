@@ -586,7 +586,7 @@ public class GlueGun : Node2D
 
 			if (real_enemy != null)
 			{
-				if (real_enemy.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy.progress.Value <= StaticNumbers.GLUE_DEMAGE)
 				{
 					real_enemy.progress.Value = 0;
 					real_enemy.progress.Visible = false;
@@ -595,7 +595,7 @@ public class GlueGun : Node2D
 				}
 				else
 				{
-					real_enemy.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					real_enemy.progress.Value -= StaticNumbers.GLUE_DEMAGE;
 					_attackeffect.Visible = true;
 					_attackeffect.Position = real_enemy.Position;
 					_attackeffect.Play("default");
@@ -606,7 +606,7 @@ public class GlueGun : Node2D
 
 			if (real_enemy2 != null)
 			{
-				if (real_enemy2.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy2.progress.Value <= StaticNumbers.GLUE_DEMAGE)
 				{
 					real_enemy2.progress.Value = 0;
 					real_enemy2.progress.Visible = false;
@@ -615,7 +615,7 @@ public class GlueGun : Node2D
 				}
 				else
 				{
-					real_enemy2.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					real_enemy2.progress.Value -= StaticNumbers.GLUE_DEMAGE;
 					_attackeffect.Visible = true;
 					_attackeffect.Position = real_enemy.Position;
 					_attackeffect.Play("default");
@@ -626,7 +626,7 @@ public class GlueGun : Node2D
 
 			if (real_enemy3 != null)
 			{
-				if (real_enemy3.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy3.progress.Value <= StaticNumbers.GLUE_DEMAGE)
 				{
 					real_enemy3.progress.Value = 0;
 					real_enemy3.progress.Visible = false;
@@ -635,7 +635,7 @@ public class GlueGun : Node2D
 				}
 				else
 				{
-					real_enemy3.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					real_enemy3.progress.Value -= StaticNumbers.GLUE_DEMAGE;
 					_attackeffect.Visible = true;
 					_attackeffect.Position = real_enemy.Position;
 					_attackeffect.Play("default");
@@ -646,7 +646,7 @@ public class GlueGun : Node2D
 
 			if (real_enemy4 != null)
 			{
-				if (real_enemy4.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy4.progress.Value <= StaticNumbers.GLUE_DEMAGE)
 				{
 					real_enemy4.progress.Value = 0;
 					real_enemy4.progress.Visible = false;
@@ -655,7 +655,7 @@ public class GlueGun : Node2D
 				}
 				else
 				{
-					real_enemy4.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					real_enemy4.progress.Value -= StaticNumbers.GLUE_DEMAGE;
 					_attackeffect.Visible = true;
 					_attackeffect.Position = real_enemy.Position;
 					_attackeffect.Play("default");
@@ -666,7 +666,7 @@ public class GlueGun : Node2D
 
 			if (real_enemy5 != null)
 			{
-				if (real_enemy5.progress.Value <= StaticNumbers.MGUN_DAMAGE)
+				if (real_enemy5.progress.Value <= StaticNumbers.GLUE_DEMAGE)
 				{
 					real_enemy5.progress.Value = 0;
 					real_enemy5.progress.Visible = false;
@@ -675,7 +675,7 @@ public class GlueGun : Node2D
 				}
 				else
 				{
-					real_enemy5.progress.Value -= StaticNumbers.MGUN_DAMAGE;
+					real_enemy5.progress.Value -= StaticNumbers.GLUE_DEMAGE;
 					_attackeffect.Visible = true;
 					_attackeffect.Position = real_enemy.Position;
 					_attackeffect.Play("default");

@@ -62,7 +62,18 @@ namespace Zoikz.Tools
         public static int MGUN_SELL_FEE { get; set; } = 4;
 
 
+
+
         public static int GLUE_PRICE { get; set; } = 12;
+
+        public static int GLUE_DEMAGE { get; set; } = 1;
+
+        public static int GLUE_SELL_FEE { get;set; } = 8;
+
+        public static int GLUE_UPDATE_FEE { get;set;} = 9;
+
+
+
 
         public static int CARNON_PRICE { get; set; } = 25;
 

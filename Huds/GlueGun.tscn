@@ -222,7 +222,7 @@ scale = Vector2( 0.3, 0.3 )
 [node name="attackeffect" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 18 )
-frame = 10
+frame = 2
 playing = true
 
 [node name="Tween" type="Tween" parent="."]
